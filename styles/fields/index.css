@@ -17,7 +17,7 @@ label{
 }
 input:focus,
 select:focus,
-textarea:focus
+textarea:focus,
 input[type="date"]:focus-within{
     outline: .25rem solid var(--surface-secondary);
     border: .125rem solid var(--stroke-highlight);
@@ -43,4 +43,19 @@ input[type="date"]{
 }
 select{
     background: url(../../assets/icons/arrow-down-01.svg) no-repeat calc(100% - 1rem);
+}
+.adress .flex{
+    gap:1.25rem;
+
+}
+.input-wrapper:has([disable]){
+    opacity: .5;
+}
+input {
+    &[disable]{
+        background-color: var(--surface-disabled);
+
+        border:1px solid var(--stroke-default);
+        color: var(--text-primary);
+    }
 }
